@@ -17,7 +17,7 @@ module Bootswatch
       end
 
       def theme_repo_url
-       "https://raw.github.com/thomaspark/bootswatch/gh-pages/#{theme_name}"
+        "https://raw.githubusercontent.com/thomaspark/bootswatch/v3.3.7/#{theme_name}"
       end
 
       def import_less
@@ -34,10 +34,7 @@ module Bootswatch
           "@import \"#{theme_directory}/base\";\n\n"
         end
 
-        gsub_file File.join(stylesheets_dest_path, 'variables.less'),
-                  '"../fonts/"',
-                  '"twitter/bootstrap/"'
-
+        gsub_file File.join(stylesheets_dest_path, 'variables.less'), '"../fonts/"', '"twitter/bootstrap/"'
       end
 
     end
